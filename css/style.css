@@ -361,12 +361,10 @@ body{
 }
 
 .navbar-toggler-icon {
-    
     color: #fff;
     font-size: 1.6em;
     
 }
-
 
 .fixedNav #navigation{
     position: fixed;
