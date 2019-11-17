@@ -5,8 +5,8 @@ $(window).on("load", function() {
 
     $(".items").isotope({
         filter: '*',
-        animationOptions:{
-            duration:1500,
+        animationOptions: {
+            duration: 1500,
             easing: 'linear',
             queue: false
         }
@@ -16,7 +16,7 @@ $(window).on("load", function() {
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     $('#slides').superslides({
         animation: 'fade',
         play: 5000,
@@ -52,34 +52,34 @@ $(document).ready(function () {
         }
     });
 
-   
+
 
     var skillsTopOffset = $(".skillsSection").offset().top;
-    $(window).scroll(function(){
+    $(window).scroll(function() {
 
-        if(window.pageYOffset > skillsTopOffset - $(window).height() + 200){
+        if (window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
 
             $('.chart').easyPieChart({
-                easing:'easeInOut',
-                barColor:'#fff',
+                easing: 'easeInOut',
+                barColor: '#fff',
                 trackColor: false,
                 scaleColor: false,
                 lineWidth: 4,
                 size: 152,
-                onStep: function(from, to, percent){
+                onStep: function(from, to, percent) {
                     $(this.el).find('.percent').text(Math.round(percent));
                 }
-         
-         
-             });
-            
+
+
+            });
+
         }
 
     });
 
     $("[data-fancybox").fancybox();
 
-   
+
 
     $('#filters a').click(function() {
         $("#filters .current").removeClass("current");
@@ -89,14 +89,14 @@ $(document).ready(function () {
 
         $(".items").isotope({
             filter: selector,
-            animationOptions:{
-                duration:1500,
+            animationOptions: {
+                duration: 1500,
                 easing: 'linear',
                 queue: false
             }
 
 
-    });
+        });
 
         return false;
 
@@ -108,7 +108,7 @@ $(document).ready(function () {
 
         var targetElement = $(this).attr("href");
         var targetPosition = $(targetElement).offset().top;
-        $("html, body").animate({ scrollTop: targetPosition - 50}, "slow");
+        $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
 
     });
 
@@ -118,15 +118,13 @@ $(document).ready(function () {
 
     $(window).on("scroll", stickyNavigation);
 
-    function stickyNavigation(){
+    function stickyNavigation() {
         var body = $("body");
 
-        if($(window).scrollTop() >= navTop) {
+        if ($(window).scrollTop() >= navTop) {
             body.css("padding-top", nav.outerHeight() + "px");
             body.addClass("fixedNav");
-        }
-
-        else{
+        } else {
             body.css("padding-top", 0);
             body.removeClass("fixedNav");
         }
