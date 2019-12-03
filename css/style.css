@@ -387,9 +387,3 @@ td:hover {
     left: 0px;
     z-index: 1000;
 }
-
-.loader .inner {
-    width: 100%;
-    height: 100%;
-    background: url(../img/loader.gif) center center no-repeat;
-}
