@@ -72,7 +72,7 @@ body {
 .aboutimage {
     max-width: 100%;
     float: left;
-    transform: rotate(270deg);
+    transform: rotate(90deg);
     margin: 90px;
     margin-left: 0;
 }
